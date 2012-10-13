@@ -10,6 +10,8 @@ getmonitor <- function(id, directory, summarize = FALSE) {
         ## the data should be printed to the console; the default is
         ## FALSE
 		
+		##Returns a data frame containing the data of the CSV files
+		
 	if(id<10)
  	{
 		id<-paste("00",id,sep="");
