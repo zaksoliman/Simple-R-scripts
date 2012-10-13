@@ -10,7 +10,7 @@ corr <- function(directory, threshold = 0)
 
         ## Return a numeric vector of correlations
 		
-		compl <- complete("specdata", id = 1:332);		
+		compl <- complete(directory, id = 1:332);		
 		monitor <- 1;
 		goodMonitors <- numeric();
 		
@@ -30,7 +30,7 @@ corr <- function(directory, threshold = 0)
 		{
 			for (id in goodMonitors)
 			{
-				dat <- getmonitor(id, "specdata");
+				dat <- getmonitor(id, directory);
 				dat<-na.omit(dat);
 			
 				#We want to calculate the correlation between sulfate and nitrate
